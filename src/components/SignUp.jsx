@@ -4,10 +4,10 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 export default function SignUp(){
 
-
     return(
         <>
-            <div>hola2</div>
+        <Link className="link" to="/Inicio">Inicio</Link>
+        <div>hola2</div>
         </>
     )
 }

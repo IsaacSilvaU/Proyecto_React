@@ -4,11 +4,10 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 export default function Login(){
 
-
     return(
-        <>
-        <Link className="link" to="../src/App">Inicio</Link>
-        <div className="Log-div">hola</div>
-        </>
+        <body className='App-body'>
+        <h1>BANCO HOLA-MUNDO</h1>
+        <p className='parrafo'>Hola</p>
+      </body>
     )
 }
