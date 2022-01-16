@@ -1,13 +1,107 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: #282c34;
+}
+/* body {
+  background-image: linear-gradient(
+    135deg,
+    #00b7d4,
+    #505488,
+    #2f3f80,
+    #161569,
+    #5a4894,
+    #a99150,
+    #ffc400,
+    #a99150,
+    #5a4894,
+    #2f3f80,
+    #161569,
+    #505488,
+    #00b7d4
+  );
+  background-size: 500%;
+  animation: fondo_animado 15s infinite;
+} */
+/* 
+html {
+  background-image: linear-gradient(
+    135deg,
+    #00b7d4,
+    #505488,
+    #2f3f80,
+    #161569,
+    #5a4894,
+    #a99150,
+    #ffc400,
+    #a99150,
+    #5a4894,
+    #2f3f80,
+    #161569,
+    #505488,
+    #00b7d4
+  );
+  background-size: 500%;
+  animation: fondo_animado 15s infinite;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+div .css-h94677 {
+  background-image: linear-gradient(
+    135deg,
+    #00b7d4,
+    #505488,
+    #2f3f80,
+    #161569,
+    #5a4894,
+    #a99150,
+    #ffc400,
+    #a99150,
+    #5a4894,
+    #2f3f80,
+    #161569,
+    #505488,
+    #00b7d4
+  );
+  background-size: 500%;
+  animation: fondo_animado 15s infinite;
 }
+
+div .css-1qwy4cs {
+  background-image: linear-gradient(
+    135deg,
+    #00b7d4,
+    #505488,
+    #2f3f80,
+    #161569,
+    #5a4894,
+    #a99150,
+    #ffc400,
+    #a99150,
+    #5a4894,
+    #2f3f80,
+    #161569,
+    #505488,
+    #00b7d4
+  );
+  background-size: 500%;
+  animation: fondo_animado 15s infinite;
+}
+ */
+/* div .css-1ocidfa {
+  display: grid;
+  grid-template-columns: 10fr 1fr 1fr;
+  width: 100%;
+} */
+
+/* @keyframes fondo_animado {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+} */
