@@ -11,6 +11,7 @@
   background-color: #ffc400;
   padding-right: 60vw;
   padding-top: 5vw;
+  margin-left: 2vw;
 }
 
 .App-body .image {
@@ -22,6 +23,7 @@
 }
 
 .App-body h1 {
+  padding-left: 32vw;
   color: #ffffff;
   font-size: calc(3vw);
   background-image: linear-gradient(
@@ -35,7 +37,7 @@
     #161569
   );
   background-size: 500%;
-  animation: fondo_animado 15s infinite;
+  animation: fondo_animado 13s infinite;
 }
 
 @keyframes fondo_animado {
