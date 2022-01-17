@@ -1,38 +1,24 @@
-import React, {useEffect, useState} from "react";
+import React, {useState, useEffect} from "react";
 import '../css/Login.css';
 import { Link } from "react-router-dom";
 
 export default function Login(){
-  const [userName, setUserName] = useState('');
-  const [userLastN, setUserLastN] = useState('');
-  const [userCC, setUserCC] = useState('');
-  const [userMail, setUserMail] = useState('');
-  const [userPhone, setUserPhone] = useState('');
-  const [userAddress, setUserAddress] = useState('');
+    const [userUser2, setUserUser] = useState('');
+    const [userPassword2, setUserPassword] = useState('');
 
-  function Delete(){
-      setUserName('');
-      setUserLastN('');
-      setUserCC('');
-      setUserMail('');
-      setUserPhone('');
-      setUserAddress('');
-      console.log("Delete")
-  }
+    function LogIn(){
+        const userUser = localStorage.getItem('userUser');
+        const userPassword = localStorage.getItem('userPassword');
+        const userName = localStorage.getItem("userName");
+        
+        if (userUser2 == userUser && userPassword2 == userPassword){
+            console.log("Bienvenido")
+            alert(`Bienvenido ${userName}`)
+        }else{
+            alert("Usuario o contraseña incorrectos.");
+        }
 
-  function Registro(){
-      localStorage.setItem('userName', userName);
-      localStorage.setItem('userLastN', userLastN);
-      localStorage.setItem('userCC', userCC);
-      localStorage.setItem('userMail', userMail);
-      localStorage.setItem('userPhone', userPhone);
-      localStorage.setItem('userAddress', userAddress);
-      console.log("hola")
-  }
-
-/*     useEffect(()=>{
-      <><h1>Registro</h1></>
-  },[]); */
+    }
 
 return(
   <>
@@ -42,43 +28,24 @@ return(
       </header>
       <body className='App-body'>
           <h1>BANCO HOLA-MUNDO</h1>
-          <h2>Registro a sucursal virtual</h2>
+          <h2>Inicio de Sesión</h2>
           <div className="container">
               {/* <form onSubmit={Registro()}> */}
               <form>
                   <ul>
-                      <li>
-                          <label for="name">Nombres: </label>
-                          <input type="text" value={userName} onChange={(v)=>setUserName(v.target.value)} placeholder=" Juan Carlos"></input> 
-                      </li>
-                      <li>
-                          <label for="name">Apellidos: </label>
-                          <input type="text" value={userLastN} onChange={(v)=>setUserLastN(v.target.value)} placeholder=" Silva Colmenarez"></input>
-                      </li>
-                      <li>
-                          <label for="number">Cédula de Ciudadanía: </label>
-                          <input type="number" value={userCC} onChange={(v)=>setUserCC(v.target.value)} placeholder=" 123456789"></input>
-                      </li>
-                      <li>
-                          <label for="mail">Correo Electrónico: </label>
-                          <input type="mail" value={userMail} onChange={(v)=>setUserMail(v.target.value)} placeholder=" juan@hotmail.com"></input>
-                      </li>
-                      <li>
-                          <label for="number">Número de teléfono: </label>
-                          <input type="text" value={userPhone} onChange={(v)=>setUserPhone(v.target.value)} placeholder=" 317-1263456"></input>
-                      </li>
-                      <li>
-                          <label for="text">Dirección: </label>
-                          <input type="text" value={userAddress} onChange={(v)=>setUserAddress(v.target.value)} placeholder=" Cll. 1 Av. 2 #2-21"></input>
-                      </li>
+                    <li>
+                        <label for="text">Nombre de Usuario: </label>
+                        <input type="text" value={userUser2} onChange={(v)=>setUserUser(v.target.value)} placeholder=" Juan21"></input>
+                    </li>
+                    <li>
+                        <label for="passowrd">Contraseña: </label>
+                        <input type="password" value={userPassword2} onChange={(v)=>setUserPassword(v.target.value)} placeholder="***"></input>
+                    </li>
                   </ul>
               </form>
               <div className="btn">
-                  <button className="btn-left" onClick={Delete}>
-                      Limpiar
-                  </button>
-                  <button className="btn-right" onClick={Registro}>
-                      Registrar
+                  <button className="btn-right" onClick={LogIn}>
+                      Iniciar Sesión
                   </button>
               </div>
           </div>
