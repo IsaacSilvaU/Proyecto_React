@@ -1,23 +1,26 @@
-import React, {useState, useEffect} from "react";
+import React, { useState } from "react";
 import '../css/Login.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login(){
     const [userUser2, setUserUser] = useState('');
     const [userPassword2, setUserPassword] = useState('');
-
+    let navigate2 = useNavigate();
+    
     function LogIn(){
         const userUser = localStorage.getItem('userUser');
         const userPassword = localStorage.getItem('userPassword');
         const userName = localStorage.getItem("userName");
         
-        if (userUser2 == userUser && userPassword2 == userPassword){
+        if ((userUser2 === userUser && userPassword2 === userPassword) && (userUser2 !== '' || userPassword2 !== '')){
             console.log("Bienvenido")
             alert(`Bienvenido ${userName}`)
+            navigate2("../UserPage",{replace: true});
+        }else if (userUser2 === '' || userPassword2 === ''){
+            alert("No se ha ingresado la información completa.")
         }else{
             alert("Usuario o contraseña incorrectos.");
         }
-
     }
 
 return(
@@ -26,10 +29,10 @@ return(
           <Link className="link" to="/">Inicio</Link>
           <Link className="link" to="/SignUp">Registro</Link>
       </header>
-      <body className='App-body'>
-          <h1>BANCO HOLA-MUNDO</h1>
+      <body className='App-bodyl'>
+          <h1>BANCO HC</h1>
           <h2>Inicio de Sesión</h2>
-          <div className="container">
+          <div className="containerl">
               {/* <form onSubmit={Registro()}> */}
               <form>
                   <ul>

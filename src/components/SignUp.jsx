@@ -1,6 +1,6 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import '../css/SignUp.css';
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 
 export default function SignUp(){
     const [userName, setUserName] = useState('');
@@ -11,18 +11,20 @@ export default function SignUp(){
     const [userAddress, setUserAddress] = useState('');
     const [userUser, setUserUser] = useState('');
     const [userPassword, setUserPassword] = useState('');
-
+    
     function Delete(){
-        setUserName('');
-        setUserLastN('');
-        setUserCC('');
-        setUserMail('');
-        setUserPhone('');
-        setUserAddress('');
-        setUserUser('');
-        setUserPassword('');
-        console.log("Delete")
+      setUserName('');
+      setUserLastN('');
+      setUserCC('');
+      setUserMail('');
+      setUserPhone('');
+      setUserAddress('');
+      setUserUser('');
+      setUserPassword('');
+      console.log("Delete")
     }
+
+    let navigate = useNavigate();
 
     function Registro(){
         localStorage.setItem('userName', userName);
@@ -33,7 +35,9 @@ export default function SignUp(){
         localStorage.setItem('userAddress', userAddress);
         localStorage.setItem('userUser', userUser);
         localStorage.setItem('userPassword', userPassword);
-        console.log("Registrado")
+        console.log("Registro exitoso")
+        alert('Registro exitoso!');
+        navigate("../Login",{replace: true});
     }
 
 /*     useEffect(()=>{
@@ -47,10 +51,9 @@ export default function SignUp(){
             <Link className="link" to="/Login">Login</Link>
         </header>
         <body className='App-body'>
-            <h1>BANCO HOLA-MUNDO</h1>
+            <h1>BANCO HC</h1>
             <h2>Registro a sucursal virtual</h2>
             <div className="container">
-                {/* <form onSubmit={Registro()}> */}
                 <form>
                     <ul>
                         <li>

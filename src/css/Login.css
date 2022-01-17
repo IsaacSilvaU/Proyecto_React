@@ -1,9 +1,9 @@
-.App-body {
+.App-bodyl {
   background-color: #ffc400;
   height: 42vw;
 }
 
-.App-body h2 {
+.App-bodyl h2 {
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3vw;
@@ -13,7 +13,7 @@
   padding-top: 5vw;
 }
 
-.App-body .image {
+.App-bodyl .image {
   width: 53vw;
   position: absolute;
   top: 10vw;
@@ -21,7 +21,7 @@
   border-radius: 2%;
 }
 
-.container {
+.containerl {
   background-color: #ffc400;
   width: 29vw;
   height: 12vw;
@@ -31,7 +31,7 @@
   border-radius: 1em;
 }
 
-.container form {
+.containerl form {
   background-color: #ffc400;
   margin: 0 auto;
   width: 27vw;
@@ -39,7 +39,7 @@
   padding: 1em;
 }
 
-.container label {
+.containerl label {
   background-color: #ffc400;
   display: inline-block;
   width: 13vw;
@@ -47,18 +47,18 @@
   text-align: right;
 }
 
-.container ul {
+.containerl ul {
   background-color: #ffc400;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.container li {
+.containerl li {
   background-color: #ffc400;
   margin-top: 1vw;
 }
-.container input {
+.containerl input {
   background-color: #ffffff;
   font: 1.1vw sans-serif;
   width: 10vw;
@@ -67,14 +67,14 @@
   border: 1px solid #999;
 }
 
-.container .btn {
+.containerl .btn {
   background-color: #ffc400;
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-top: 2.5vw;
 }
-.container .btn-right {
+.containerl .btn-right {
   background-color: #a99150;
   font: 1vw sans-serif;
   width: 9vw;
@@ -83,15 +83,14 @@
   margin-left: 35%;
 }
 
-.App-body h1 {
-  padding-left: 32vw;
+.App-bodyl h1 {
+  padding-left: 40vw;
   color: #ffffff;
   font-size: calc(3vw);
   background-image: linear-gradient(
     135deg,
-    #00b7d4,
-    #505488,
-    #2f3f80,
+    #b93912,
+    #e24617,
     #161569,
     #5a4894,
     #a99150,
@@ -100,8 +99,8 @@
     #5a4894,
     #2f3f80,
     #161569,
-    #505488,
-    #00b7d4
+    #e24617,
+    #b93912
   );
   background-size: 500%;
   animation: fondo_animado 13s infinite;

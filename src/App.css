@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: flex-end;
   color: white;
-  font-size: calc(13px + 2vmin);
+  font-size: calc(10px + 2vmin);
   list-style: none;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
@@ -23,12 +23,21 @@
 .App-footer {
   position: static;
   background-color: #282c34;
-  margin-top: 1vw;
+  margin-top: 1.2vw;
 }
 
 .App-footer .App-link {
+  color: #ffffff;
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-left: 5vw;
+}
+
+.App-footer .App-link2 {
   color: #61dafb;
   list-style: none;
   text-decoration: none;
   font-family: Arial, Helvetica, sans-serif;
+  margin-left: 60vw;
 }

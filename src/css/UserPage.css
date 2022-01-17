@@ -1,0 +1,126 @@
+.App-header button {
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.4vw;
+}
+
+.App-bodyu {
+  background-color: #ffc400;
+  height: 42vw;
+}
+
+.App-bodyu .image {
+  width: 53vw;
+  position: absolute;
+  top: 10vw;
+  right: 4vw;
+  border-radius: 2%;
+}
+
+.containeru {
+  background-color: #ffc400;
+  width: 80%;
+  height: 34vw;
+  margin-left: 13%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vw;
+}
+
+.containeru .container-left {
+  background-color: #ffc400;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
+  font: 1.2vw sans-serif;
+  width: 50%;
+  padding: 1em;
+}
+
+.container-left h2 {
+  color: white;
+  margin-left: 0;
+  margin-top: 1em;
+  background-color: #ffc400;
+}
+.container-left h3 {
+  color: white;
+  margin: 1em;
+  margin-top: 1em;
+  background-color: #ffc400;
+}
+.container-left p {
+  color: rgb(0, 0, 0);
+  margin-left: 1em;
+  margin-top: 1em;
+  font-weight: bold;
+  background-color: #ffc400;
+}
+
+.containeru .container-right {
+  background-color: #ffc400;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  padding: 1em;
+  font: 1.2vw sans-serif;
+  text-align: right;
+}
+
+.container-right h2 {
+  color: white;
+  margin-left: 0;
+  margin-top: 1em;
+  background-color: #ffc400;
+}
+.container-right h3 {
+  color: white;
+  margin: 1em;
+  margin-top: 1em;
+  background-color: #ffc400;
+}
+.container-right p {
+  color: rgb(0, 0, 0);
+  margin-left: 1em;
+  margin-top: 1em;
+  font-weight: bold;
+  background-color: #ffc400;
+}
+
+.App-bodyu h1 {
+  padding-left: 37%;
+  color: #ffffff;
+  font-size: calc(3vw);
+  background-image: linear-gradient(
+    135deg,
+    #b93912,
+    #e24617,
+    #161569,
+    #5a4894,
+    #a99150,
+    #ffc400,
+    #a99150,
+    #5a4894,
+    #2f3f80,
+    #161569,
+    #e24617,
+    #b93912
+  );
+  background-size: 500%;
+  animation: fondo_animado 13s infinite;
+}
+
+@keyframes fondo_animado {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

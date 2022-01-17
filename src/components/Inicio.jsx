@@ -1,8 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../css/Inicio.css';
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";/* 
-import Login from './components/Login'
-import SignUp from './components/SignUp' */
+import { Link } from "react-router-dom";
 
 function Inicio() {
   return (
@@ -12,10 +10,10 @@ function Inicio() {
         <Link className="link" to="/SignUp">Registro</Link>
       </header>
 
-      <div className='App-body'>
-        <h1>BANCO HOLA-MUNDO</h1>
-        <p className='parrafo'>Tu mejor Banca Online</p>
-        <img src='./banco-online.jpg' className='image'></img>
+      <div className='App-bodyi'>
+        <h1>BANCO HOLA-COLOMBIA</h1>
+        <p className='parrafo'>Tu mejor Banco Online</p>
+        <img src='./banco-online.jpg' className='image' alt='Imagen descriptiva'></img>
       </div>
     </div>
   );

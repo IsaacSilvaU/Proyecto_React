@@ -1,5 +1,5 @@
 {
-    "files.autoSave": "afterDelay",
-    "editor.tabSize": 1,
-    "editor.wordWrap": "on"
+  "files.autoSave": "afterDelay",
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on"
 }
