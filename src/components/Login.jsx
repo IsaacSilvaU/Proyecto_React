@@ -5,9 +5,9 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 export default function Login(){
 
     return(
-        <body className='App-body'>
-        <h1>BANCO HOLA-MUNDO</h1>
-        <p className='parrafo'>Hola</p>
-      </body>
+      <>
+      <Link className="link" to="/App">Inicio</Link>
+      <div>hola2</div>
+      </>
     )
 }

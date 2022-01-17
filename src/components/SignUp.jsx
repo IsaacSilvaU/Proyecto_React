@@ -6,8 +6,11 @@ export default function SignUp(){
 
     return(
         <>
-        <Link className="link" to="/Inicio">Inicio</Link>
-        <div>hola2</div>
+        <h1>Hola Registro</h1>
+        <div className='App-body'>
+            <h1>BANCO HOLA-MUNDO</h1>
+            <p className='parrafo'>Hola</p>
+        </div>
         </>
     )
 }

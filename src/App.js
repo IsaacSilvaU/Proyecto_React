@@ -20,7 +20,11 @@ function App() {
         </BrowserRouter>
       </header>
 
-      <Inicio/>
+      <div className='App-body'>
+      <h1>BANCO HOLA-MUNDO</h1>
+      <p className='parrafo'>Tu mejor Banca Online</p>
+      <img src='./banco-online.jpg' className='image'></img>
+    </div>
         
       <footer className='App-footer'>
         <a className="App-link" href="https://vasscompany.com/" target="_blank"rel="noopener noreferrer">
