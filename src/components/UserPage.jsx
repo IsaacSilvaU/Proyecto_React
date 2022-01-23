@@ -5,6 +5,10 @@ import {Link, useNavigate} from 'react-router-dom';
 function UserPage(props) {
   let navigate = useNavigate();
   
+/*   if(this.userId == 1) window.location.href = window.location.href.split("services/")[0]+"administration/services";
+  else window.location.href = window.location.href.split("services/")[0]+"user/services";
+  deliveryId: window.location.href.split("detalles/")[1],
+   */
 
   function Close(){
 /*     const userName = '';
