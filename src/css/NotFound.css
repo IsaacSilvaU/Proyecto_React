@@ -1,0 +1,9 @@
+.App-bodyE {
+  background-color: #91eeff;
+  height: 42vw;
+}
+
+.App-bodyE .imageError {
+  width: 100%;
+  position: absolute;
+}

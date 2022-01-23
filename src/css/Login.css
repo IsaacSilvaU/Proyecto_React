@@ -1,5 +1,5 @@
 .App-bodyl {
-  background-color: #ffc400;
+  background-color: #91eeff;
   height: 42vw;
 }
 
@@ -7,7 +7,7 @@
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3vw;
-  background-color: #ffc400;
+  background-color: #91eeff;
   padding-right: 20vw;
   padding-left: 37vw;
   padding-top: 5vw;
@@ -22,7 +22,7 @@
 }
 
 .containerl {
-  background-color: #ffc400;
+  background-color: #91eeff;
   width: 29vw;
   height: 12vw;
   margin-top: 6vw;
@@ -32,7 +32,7 @@
 }
 
 .containerl form {
-  background-color: #ffc400;
+  background-color: #91eeff;
   margin: 0 auto;
   width: 27vw;
   height: 6vw;
@@ -40,7 +40,7 @@
 }
 
 .containerl label {
-  background-color: #ffc400;
+  background-color: #91eeff;
   display: inline-block;
   width: 13vw;
   font: 1.2vw sans-serif;
@@ -48,14 +48,14 @@
 }
 
 .containerl ul {
-  background-color: #ffc400;
+  background-color: #91eeff;
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
 .containerl li {
-  background-color: #ffc400;
+  background-color: #91eeff;
   margin-top: 1vw;
 }
 .containerl input {
@@ -68,14 +68,14 @@
 }
 
 .containerl .btn {
-  background-color: #ffc400;
+  background-color: #91eeff;
   display: flex;
   flex-direction: row;
   align-items: center;
   margin-top: 2.5vw;
 }
 .containerl .btn-right {
-  background-color: #a99150;
+  background-color: #1a8100;
   font: 1vw sans-serif;
   width: 9vw;
   height: 2vw;
@@ -89,18 +89,13 @@
   font-size: calc(3vw);
   background-image: linear-gradient(
     135deg,
-    #b93912,
-    #e24617,
-    #161569,
-    #5a4894,
-    #a99150,
-    #ffc400,
-    #a99150,
-    #5a4894,
-    #2f3f80,
-    #161569,
-    #e24617,
-    #b93912
+    #00c3ff,
+    #004f6e,
+    #005320,
+    #1a8100,
+    #005320,
+    #004f6e,
+    #00c3ff
   );
   background-size: 500%;
   animation: fondo_animado 13s infinite;

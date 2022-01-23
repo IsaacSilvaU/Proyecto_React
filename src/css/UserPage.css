@@ -5,7 +5,7 @@
 }
 
 .App-bodyu {
-  background-color: #ffc400;
+  background-color: #91eeff;
   height: 42vw;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .containeru {
-  background-color: #ffc400;
+  background-color: #91eeff;
   width: 80%;
   height: 34vw;
   margin-left: 13%;
@@ -28,7 +28,7 @@
 }
 
 .containeru .container-left {
-  background-color: #ffc400;
+  background-color: #91eeff;
   display: flex;
   flex-direction: column;
   align-content: flex-start;
@@ -42,24 +42,24 @@
   color: white;
   margin-left: 0;
   margin-top: 1em;
-  background-color: #ffc400;
+  background-color: #91eeff;
 }
 .container-left h3 {
   color: white;
   margin: 1em;
   margin-top: 1em;
-  background-color: #ffc400;
+  background-color: #91eeff;
 }
 .container-left p {
   color: rgb(0, 0, 0);
   margin-left: 1em;
   margin-top: 1em;
   font-weight: bold;
-  background-color: #ffc400;
+  background-color: #91eeff;
 }
 
 .containeru .container-right {
-  background-color: #ffc400;
+  background-color: #91eeff;
   display: flex;
   flex-direction: column;
   align-content: flex-start;
@@ -74,40 +74,34 @@
   color: white;
   margin-left: 0;
   margin-top: 1em;
-  background-color: #ffc400;
+  background-color: #91eeff;
 }
 .container-right h3 {
   color: white;
   margin: 1em;
   margin-top: 1em;
-  background-color: #ffc400;
+  background-color: #91eeff;
 }
 .container-right p {
   color: rgb(0, 0, 0);
   margin-left: 1em;
   margin-top: 1em;
   font-weight: bold;
-  background-color: #ffc400;
+  background-color: #91eeff;
 }
-
 .App-bodyu h1 {
   padding-left: 37%;
   color: #ffffff;
   font-size: calc(3vw);
   background-image: linear-gradient(
     135deg,
-    #b93912,
-    #e24617,
-    #161569,
-    #5a4894,
-    #a99150,
-    #ffc400,
-    #a99150,
-    #5a4894,
-    #2f3f80,
-    #161569,
-    #e24617,
-    #b93912
+    #00c3ff,
+    #004f6e,
+    #005320,
+    #1a8100,
+    #005320,
+    #004f6e,
+    #00c3ff
   );
   background-size: 500%;
   animation: fondo_animado 13s infinite;

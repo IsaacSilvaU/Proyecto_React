@@ -2,12 +2,12 @@ import React from 'react';
 import '../css/UserPage.css';
 import {Link, useNavigate} from 'react-router-dom';
 
-function UserPage() {
-
+function UserPage(props) {
   let navigate = useNavigate();
+  
 
   function Close(){
-    const userName = '';
+/*     const userName = '';
     const userLastN = '';
     const userCC = '';
     const userMail = '';
@@ -22,7 +22,7 @@ function UserPage() {
     localStorage.setItem('userPhone', userPhone);
     localStorage.setItem('userAddress', userAddress);
     localStorage.setItem('userUser', userUser);
-    localStorage.setItem('userPassword', userPassword);
+    localStorage.setItem('userPassword', userPassword); */
     navigate("../",{replace: true});
 
   }
@@ -33,7 +33,7 @@ function UserPage() {
           <button onClick={Close}>Cerras Sesión</button>
       </header>
       <div className='App-bodyu'>
-            <h1>Bienvenido {localStorage.getItem("userName")}</h1>
+            <h1>Bienvenido {props.name}</h1>
         <div className='containeru'>
           <div className='container-left'>
             <h2>Cuenta de ahorros y corriente</h2>
