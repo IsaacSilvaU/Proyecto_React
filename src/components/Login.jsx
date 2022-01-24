@@ -1,13 +1,16 @@
 import React, { useState } from "react";
 import '../css/Login.css';
 import { useNavigate } from "react-router-dom";
+import { Button } from '@chakra-ui/react';
+import { useToast } from '@chakra-ui/react';
 
 export default function LoginPage(){
     
     const [userUser2, setUserUser] = useState('');
     const [userPassword2, setUserPassword] = useState('');
     let navigate2 = useNavigate();
-    
+    const toast = useToast();
+
     function LogIn(){
         const listaDeObjetos = JSON.parse(localStorage.getItem('JsonRegistry'));
         console.log(listaDeObjetos);
@@ -23,25 +26,43 @@ export default function LoginPage(){
                 
                 if ((userUser2 === userInfo.userUser && userPassword2 === userInfo.userPassword) && (userUser2 !== '' || userPassword2 !== '')){
                     console.log(`Bienvenido ${userInfo.userName}`);
-                    alert(`Bienvenido ${userInfo.userName}`);
+                    toast({
+                        title: `Bienvenido ${userInfo.userName}`,
+                        status: "success",
+                        duration: 1000,
+                        isClosable: true,
+                      });
                     const Name = userInfo.userName;
                     const account = true;
                     localStorage.setItem('user',Name);
                     localStorage.setItem('account',account);
-                    navigate2("../UserPage",{replace: false});
+                    navigate2("../UserPage",{replace: true});
 
                 }else if (userPassword2 === ''){
-                    alert("No se ha ingresado la información completa.")
-                }else if (userUser2 !== userInfo.userUser && userPassword2 !== userInfo.userPassword){
-                    alert("Usuario o contraseña incorrectos.");
+                    toast({
+                        title: "No se ha ingresado la información completa.",
+                        status: "warning",
+                        duration: 1000,
+                        isClosable: true,
+                      });
                 }else{
-                    alert("Usuario o contraseña incorrectos.");
+                    toast({
+                        title: "Usuario o contraseña incorrectos.",
+                        status: "error",
+                        duration: 1000,
+                        isClosable: true,
+                      });
                 }
                 break;
             }
         }
         if (userUser2 !== userInfo.userUser ){
-            alert("Usuario no encontrado");
+            toast({
+                title: "Usuario no encontrado",
+                status: "error",
+                duration: 1000,
+                isClosable: true,
+            });
         }
     }
 
@@ -60,9 +81,9 @@ return(
         </ul>
     </form>
     <div className="btn">
-        <button className="btn-right" onClick={LogIn}>
+        <Button className="btn-right" onClick={LogIn}>
             Iniciar Sesión
-        </button>
+        </Button>
     </div>
   </>
     )

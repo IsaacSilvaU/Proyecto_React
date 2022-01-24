@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import '../css/SignUp.css';
 import { useNavigate} from "react-router-dom";
+import { Button } from '@chakra-ui/react'
+import { useToast } from '@chakra-ui/react';
 
 var registry = [];
 
@@ -13,6 +15,8 @@ export default function SignUp(){
     const [userAddress, setUserAddress] = useState('');
     const [userUser, setUserUser] = useState('');
     const [userPassword, setUserPassword] = useState('');
+
+    const toast = useToast();
 
     function Delete(){
       setUserName('');
@@ -38,34 +42,49 @@ export default function SignUp(){
         credit = internationalNumberFormat.format(credit);
         debt = internationalNumberFormat.format(debt);
 
-        const user ={
-            userName:userName,
-            userLastN:userLastN,
-            userCC:userCC, 
-            userMail:userMail, 
-            userPhone:userPhone, 
-            userAddress:userAddress, 
-            userUser:userUser, 
-            userPassword:userPassword,
-            balance:balance,
-            credit:credit,
-            debt:debt,
-        };
-        
-        const JsonReg = JSON.stringify(user);
-        registry.push(JsonReg);
-        const JsonRegistry = JSON.stringify(registry)
-        localStorage.setItem('JsonRegistry',JsonRegistry)
-        //console.log(registry);
-        console.log(balance);
-        console.log(credit);
-
-        console.log("Registro exitoso");
-        alert('Registro exitoso!');
-        navigate("../Login",{replace: true});
+        if (userName==='' || userLastN==='' || userCC==='' || userUser==='' || userPassword===''){
+            toast({
+                title: `Error. Como mínimo debes ingresar tu nombre y apellido, cédula, nombre de usuario y contraseña.`,
+                status: "error",
+                duration: 3000,
+                isClosable: true,
+            });
+        }else{
+            const user ={
+                userName:userName,
+                userLastN:userLastN,
+                userCC:userCC, 
+                userMail:userMail, 
+                userPhone:userPhone, 
+                userAddress:userAddress, 
+                userUser:userUser, 
+                userPassword:userPassword,
+                balance:balance,
+                credit:credit,
+                debt:debt,
+            };
+    
+            const JsonReg = JSON.stringify(user);
+            registry.push(JsonReg);
+            const JsonRegistry = JSON.stringify(registry);
+            
+            localStorage.setItem('JsonRegistry',JsonRegistry);
+            //console.log(registry);
+            console.log(balance);
+            console.log(credit);
+            
+            console.log("Registro exitoso");
+            toast({
+                title: `¡Registro exitoso!`,
+                status: "success",
+                duration: 1000,
+                isClosable: true,
+            });
+            navigate("../Login",{replace: true});
+        }
     }
 
-  return(
+return(
     <>
     <form>
         <ul>
@@ -104,12 +123,12 @@ export default function SignUp(){
         </ul>
     </form>
     <div className="btn">
-        <button className="btn-left" onClick={Delete}>
+        <Button className="btn-left" onClick={Delete}>
             Limpiar
-        </button>
-        <button className="btn-right" onClick={Registro}>
+        </Button>
+        <Button className="btn-right" onClick={Registro}>
             Registrar
-        </button>
+        </Button>
     </div>
     </>
   )

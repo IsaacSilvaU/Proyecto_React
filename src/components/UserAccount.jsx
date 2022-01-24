@@ -1,12 +1,14 @@
 import '../css/UserPage.css';
 import { useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
+import { useToast } from '@chakra-ui/react';
 
 function UserAccount() {
   let navigate = useNavigate();
   const listaDeObjetos = JSON.parse(localStorage.getItem('JsonRegistry'));
   const user = localStorage.getItem('user');
   //window.location.href = window.location.href.split("UserAccount/")[0]+"/Luis";
+  const toast = useToast();
 
   for(let i=0; i < listaDeObjetos.length; i++) {
     var userInfo = JSON.parse(listaDeObjetos[i]);
@@ -26,10 +28,17 @@ function UserAccount() {
 }
 useEffect(()=>{
   if(userInfo.userName !== user){
-    alert("No has iniciado sesión, serás redirigido al login");
-    setTimeout(() => {navigate("../Login",{replace: false});}, 100);
+    toast({
+      title:"No has iniciado sesión, serás redirigido al login",
+      status: "error",
+      duration: 1500,
+      isClosable: true,
+      position: 'top',
+    });
+    setTimeout(() => {
+      navigate("../",{replace: true});}, 1500);
   }
-})
+});
 
 return (
   <div className='App-bodyu'>

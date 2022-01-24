@@ -2,6 +2,7 @@ import React from 'react';
 import '../css/Inicio.css';
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import { Button } from '@chakra-ui/react'
 
 function InicioPage() {
   useEffect(()=>{
@@ -16,6 +17,7 @@ function InicioPage() {
 return (
   <div className="App">
     <header className="App-header">
+      <Link className="link" to="/UserPage">Tu Cuenta</Link>
       <Link className="link" to="/Login">Login</Link>
       <Link className="link" to="/SignUp">Registro</Link>
     </header>
