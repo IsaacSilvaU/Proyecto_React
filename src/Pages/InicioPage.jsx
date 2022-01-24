@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useEffect, Suspense } from 'react';
 import '../css/Inicio.css';
+import { Skeleton, Stack } from '@chakra-ui/react';
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
-
+//const Image = lazy(()=>import('./banco-online.jpg'));
 function InicioPage() {
   const accnt = localStorage.getItem('account');
+  var account = false;
   if(accnt === 'true'){
-    var account = true
+    account = true;
     console.log(account);
   }else if(accnt === 'false'){
-    var account = false
+    account = false
     console.log(account);
   }
   useEffect(()=>{
-
   },[]);
 
 return (
@@ -27,7 +27,14 @@ return (
     <div className='App-bodyi'>
       <h1>BANCO HOLA-COLOMBIA</h1>
       <p className='parrafo'>Tu mejor Banco Online</p>
-      <img src='./banco-online.jpg' className='image' alt='Imagen descriptiva'></img>
+      <Suspense fallback={<Stack>
+        <Skeleton height='20px' />
+        <Skeleton height='20px' />
+        <Skeleton height='20px' />
+        </Stack>}
+      >
+        <img src='./banco-online.jpg' className='image' alt='Imagen descriptiva'></img>
+      </Suspense>
     </div>
   </div>
   );

@@ -1,7 +1,9 @@
 import '../css/UserPage.css';
 import { Link, useNavigate } from 'react-router-dom';
-import UserAccount from '../components/UserAccount';
 import { useToast } from '@chakra-ui/react';
+import React, { Suspense, lazy } from 'react';
+import { Skeleton, Stack } from '@chakra-ui/react';
+const UserAccount = lazy(()=>import('../components/UserAccount'));
 
 function UserPage() {
   const toast = useToast();
@@ -29,7 +31,14 @@ return (
       <Link className="link" to="/">Inicio</Link>
       <button onClick={Close}>Cerras Sesión</button>
     </header>
-    <UserAccount/>
+    <Suspense fallback={<Stack>
+      <Skeleton height='20px' />
+      <Skeleton height='20px' />
+      <Skeleton height='20px' />
+      </Stack>}
+    >
+      <UserAccount/>
+    </Suspense>
   </>
   )
 }
