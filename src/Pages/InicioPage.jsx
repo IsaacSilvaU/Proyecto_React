@@ -4,19 +4,22 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 
 function InicioPage() {
+  const accnt = localStorage.getItem('account');
+  if(accnt === 'true'){
+    var account = true
+    console.log(account);
+  }else if(accnt === 'false'){
+    var account = false
+    console.log(account);
+  }
   useEffect(()=>{
-    const account = localStorage.getItem('account');
-    if(account === 'true'){
-      console.log(account);
-    }else if(account === 'false'){
-      console.log(account);
-    }
+
   },[]);
 
 return (
   <div className="App">
     <header className="App-header">
-      <Link className="link" to="/UserPage">Tu Cuenta</Link>
+      {account ? <Link className="link" to="/UserPage">Tu Cuenta</Link> : <p></p>}
       <Link className="link" to="/Login">Login</Link>
       <Link className="link" to="/SignUp">Registro</Link>
     </header>
