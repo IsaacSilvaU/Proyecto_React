@@ -36,7 +36,7 @@ useEffect(()=>{
       position: 'top',
     });
     setTimeout(() => {
-      navigate("../",{replace: true});}, 1500);
+      navigate("../Login",{replace: true});}, 1500);
   }
 });
 
