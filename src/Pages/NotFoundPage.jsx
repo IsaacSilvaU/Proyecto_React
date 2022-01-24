@@ -1,8 +1,7 @@
-import React from 'react';
 import '../css/NotFound.css';
 import { Link } from "react-router-dom";
 
-function NotFound() {
+function NotFoundPage() {
   return (
     <div className="App">
       <header className="App-header">
@@ -18,4 +17,4 @@ function NotFound() {
   );
 }
 
-export default NotFound;
+export default NotFoundPage;
