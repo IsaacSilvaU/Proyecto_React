@@ -29,7 +29,7 @@ return (
   <>
     <header className="App-header">
       <Link className="link" to="/">Inicio</Link>
-      <button onClick={Close}>Cerras Sesión</button>
+      <button onClick={Close}>Cerrar Sesión</button>
     </header>
     <Suspense fallback={<Stack>
       <Skeleton height='20px' />

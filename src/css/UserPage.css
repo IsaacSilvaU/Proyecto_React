@@ -1,7 +1,8 @@
 .App-header button {
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 2.8vh;
+  font-size: 2.9vh;
+  margin-right: 1vw;
 }
 
 .App-bodyu {
@@ -15,6 +16,17 @@
   top: 10vw;
   right: 4vw;
   border-radius: 2%;
+}
+
+.transactions{
+  color: #ffffff;
+  list-style: none;
+  text-decoration: none;
+  background-color: #41be98;
+}
+.transactions .link{
+  margin-left: 17.5vw;
+  font-size: 1.2vw;
 }
 
 .containeru {
@@ -39,17 +51,19 @@
 }
 
 .container-left h2 {
-  color: white;
+  color: #8be2c8;
   margin-left: 0;
-  margin-top: 1em;
+  margin-top: 0.5em;
   background-color: #83ecff;
-  font: 1.9vw sans-serif;
-  -webkit-text-stroke: 0.7px #1a8100;
+  font: 2.5vw sans-serif;
+  -webkit-text-stroke: 1px #1a8100;
 }
 .container-left h3 {
-  color: white;
-  margin: 1em;
+  color: #1a8100;
+  font: 1.7vw sans-serif;
+  margin-left: 0.7em;
   margin-top: 1em;
+  margin-bottom: 0em;
   background-color: #83ecff;
 }
 .container-left p {
@@ -74,17 +88,19 @@
 }
 
 .container-right h2 {
-  color: white;
+  color: #8be2c8;
   margin-left: 0;
-  margin-top: 1em;
+  margin-top: 0.5em;
   background-color: #83ecff;
-  font: 1.9vw sans-serif;
-  -webkit-text-stroke: 0.7px #1a8100;
+  font: 2.5vw sans-serif;
+  -webkit-text-stroke: 1px #1a8100;
 }
 .container-right h3 {
-  color: white;
-  margin: 1em;
+  color: #1a8100;
+  font: 1.7vw sans-serif;
+  margin-left: 0.7em;
   margin-top: 1em;
+  margin-bottom: 0em;
   background-color: #83ecff;
 }
 .container-right p {

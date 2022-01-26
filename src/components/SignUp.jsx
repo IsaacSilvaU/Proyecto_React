@@ -37,10 +37,10 @@ export default function SignUp(){
         let credit = Math.trunc(Math.random()*(10000000 - 10000) + 10000);
         let debt = Math.trunc(Math.random()*(1000000 - 1000) + 1000);
 
-        const internationalNumberFormat = new Intl.NumberFormat('en-US');
+/*         const internationalNumberFormat = new Intl.NumberFormat('en-US');
         balance = internationalNumberFormat.format(balance);
         credit = internationalNumberFormat.format(credit);
-        debt = internationalNumberFormat.format(debt);
+        debt = internationalNumberFormat.format(debt); */
 
         if (userName==='' || userLastN==='' || userCC==='' || userUser==='' || userPassword===''){
             toast({
@@ -67,13 +67,7 @@ export default function SignUp(){
             const JsonReg = JSON.stringify(user);
             registry.push(JsonReg);
             const JsonRegistry = JSON.stringify(registry);
-            
             localStorage.setItem('JsonRegistry',JsonRegistry);
-            //console.log(registry);
-            console.log(balance);
-            console.log(credit);
-            
-            console.log("Registro exitoso");
             toast({
                 title: `¡Registro exitoso!`,
                 status: "success",

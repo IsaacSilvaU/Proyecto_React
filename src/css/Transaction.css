@@ -1,57 +1,98 @@
-.App-body {
+.App-header-T {
+  background-color: #042a44;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  color: white;
+  font-size: calc(10px + 2vmin);
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 7vh;
+}
+
+.App-header-T .link-T {
+  color: #ffffff;
+  list-style: none;
+  text-decoration: none;
+  margin-right: 2vw;
+  margin-left: 1vw;
+}
+
+.App-body-T {
   background-color: #91eeff;
   height: 42vw;
 }
 
-.App-body h2 {
+.App-body-T h2 {
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 3.5vw;
   -webkit-text-stroke: 0.5px #1a8100;
   background-color: #91eeff;
   padding-right: 20vw;
-  padding-left: 29vw;
-  padding-top: 0.8vw;
+  padding-left: 30vw;
+  padding-top: 1vw;
 }
 
-.container {
+.container-T {
   background-color: #91eeff;
   width: 29vw;
-  height: 28.5vw;
-  margin-top: 1vw;
+  height: 20vw;
+  margin-top: 0.8vw;
   margin-left: 34vw;
   border: 4px solid rgb(255, 255, 255);
   border-radius: 1em;
 }
 
-.container form {
+.subtitle {
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5vw;
+  -webkit-text-stroke: 0.5px #1a8100;
+  background-color: #91eeff;
+  padding-left: 2.5vw;
+  margin-top: 1vw;
+}
+
+.container-T form {
   background-color: #91eeff;
   margin: 0 auto;
   width: 27vw;
-  height: 18vw;
+  height: 9vw;
   padding: 1em;
+  padding-top: 0.5vw;
 }
 
-.container label {
+.container-T form h3{
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2vw;
+  padding-left: 1vw;
+  padding-bottom: 0.5vw;
+
+}
+
+.container-T label {
   background-color: #91eeff;
-  display: inline-block;
   width: 13vw;
-  font: 1.2vw sans-serif;
+  font: 1.1vw sans-serif;
   text-align: right;
+  display: inline-block;
+  margin-right: 1vw;
 }
 
-.container ul {
+.container-T ul {
   background-color: #91eeff;
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
-.container li {
+.container-T li {
   background-color: #91eeff;
-  margin-top: 1vw;
+  margin-top: 0.5vw;
 }
-.container input {
+.container-T input {
   background-color: #ffffff;
   font: 1.1vw sans-serif;
   width: 10vw;
@@ -60,23 +101,23 @@
   border: 1px solid #999;
 }
 
-.container .btn {
+.container-T .btn {
   background-color: #91eeff;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 7vw;
+  margin-top: 1vw;
 }
-.container .btn-right {
+.container-T .btn-R {
   background-color: #28c900;
   font: 1vw sans-serif;
-  width: 5vw;
+  width: 7vw;
   height: 2.5vw;
   border-radius: 7px;
-  margin-left: 50%;
+  margin-left: 40%;
 }
 
-.container .btn-left {
+.container-T .btn-left-R {
   background-color: #1a8100;
   font: 1vw sans-serif;
   width: 5vw;
@@ -85,7 +126,7 @@
   margin-left: 8%;
 }
 
-.App-body h1 {
+.App-body-T h1 {
   padding-left: 40vw;
   color: #ffffff;
   font-size: calc(3vw);

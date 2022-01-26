@@ -6,6 +6,8 @@ import SignUp from './Pages/SignUpPage';
 import Inicio from './Pages/InicioPage';
 import UserPage from './Pages/UserPage';
 import NotFound from './Pages/NotFoundPage';
+import RecoverPage from './Pages/RecoverPage';
+import Transaction from './Pages/TransactionPage';
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route path="/Login" element={<Login/>}/>  
         <Route path="/SignUp" element={<SignUp/>}/>
         <Route path="/UserPage" element={<UserPage/>}/>
+        <Route path="/Recover" element={<RecoverPage/>}/>
+        <Route path="/Transaction" element={<Transaction/>}/>
         <Route path="/" element={<Inicio/>}/>
         <Route path="/*" element={<NotFound/>}/>
       </Routes>

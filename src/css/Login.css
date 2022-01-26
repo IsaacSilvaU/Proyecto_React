@@ -10,7 +10,8 @@ h1 {
 .App-bodyl h2 {
   color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 3vw;
+  font-size: 3.5vw;
+  -webkit-text-stroke: 0.5px #1a8100;
   background-color: #91eeff;
   padding-right: 20vw;
   padding-left: 37vw;
@@ -29,8 +30,8 @@ h1 {
   background-color: #91eeff;
   width: 29vw;
   height: 12vw;
-  margin-top: 6vw;
-  margin-left: 33vw;
+  margin-top: 5vw;
+  margin-left: 35vw;
   border: 4px solid rgb(255, 255, 255);
   border-radius: 1em;
 }
@@ -79,12 +80,10 @@ h1 {
   margin-top: 2.5vw;
 }
 .containerl .btn-right {
-  background-color: #1a8100;
-  font: 1vw sans-serif;
-  width: 9vw;
-  height: 2vw;
-  border-radius: 7px;
-  margin-left: 35%;
+  margin-left: 8vw;
+}
+.containerl .btn-right2 {
+  margin-left: 1.5vw;
 }
 
 .App-bodyl h1 {

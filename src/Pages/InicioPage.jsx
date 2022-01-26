@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense } from 'react';
+import React, { Suspense } from 'react';
 import '../css/Inicio.css';
 import { Skeleton, Stack } from '@chakra-ui/react';
 import { Link } from "react-router-dom";
@@ -8,19 +8,15 @@ function InicioPage() {
   var account = false;
   if(accnt === 'true'){
     account = true;
-    console.log(account);
   }else if(accnt === 'false'){
-    account = false
-    console.log(account);
+    account = false;
   }
-  useEffect(()=>{
-  },[]);
 
 return (
   <div className="App">
     <header className="App-header">
       {account ? <Link className="link" to="/UserPage">Tu Cuenta</Link> : <p></p>}
-      <Link className="link" to="/Login">Login</Link>
+      {account ? <p></p> : <Link className="link" to="/Login">Login</Link>}
       <Link className="link" to="/SignUp">Registro</Link>
     </header>
 

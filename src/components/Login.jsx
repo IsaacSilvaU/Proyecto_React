@@ -13,28 +13,20 @@ export default function LoginPage(){
 
     function LogIn(){
         const listaDeObjetos = JSON.parse(localStorage.getItem('JsonRegistry'));
-        console.log(listaDeObjetos);
 
         for(let i=0; i < listaDeObjetos.length; i++) {
             var userInfo = JSON.parse(listaDeObjetos[i]);
-            console.log(userInfo.userName);
-            console.log(userUser2);
-
             if(userInfo.userUser === userUser2){
-                console.log(userInfo.userUser);
-                console.log(userInfo.userPassword);
-                
                 if ((userUser2 === userInfo.userUser && userPassword2 === userInfo.userPassword) && (userUser2 !== '' || userPassword2 !== '')){
-                    console.log(`Bienvenido ${userInfo.userName}`);
                     toast({
                         title: `Bienvenido ${userInfo.userName}`,
                         status: "success",
                         duration: 1000,
                         isClosable: true,
                       });
-                    const Name = userInfo.userName;
+                    const userDocument = userInfo.userCC;
                     const account = true;
-                    localStorage.setItem('user',Name);
+                    localStorage.setItem('userDocument',userDocument);
                     localStorage.setItem('account',account);
                     navigate2("../UserPage",{replace: true});
 
@@ -48,7 +40,7 @@ export default function LoginPage(){
                 }else{
                     toast({
                         title: "Usuario o contraseña incorrectos.",
-                        status: "error",
+                        status: "warning",
                         duration: 1000,
                         isClosable: true,
                       });
@@ -58,7 +50,7 @@ export default function LoginPage(){
         }
         if (userUser2 !== userInfo.userUser ){
             toast({
-                title: "Usuario no encontrado",
+                title: "Usuario o contraseña incorrectos",
                 status: "error",
                 duration: 1000,
                 isClosable: true,
@@ -81,7 +73,10 @@ return(
         </ul>
     </form>
     <div className="btn">
-        <Button className="btn-right" onClick={LogIn}>
+        <Button className="btn-right2" size='md' colorScheme='teal' fontSize='0.8vw' variant='outline' onClick={()=>navigate2("../Recover",{replace: true})}>
+            ¿Olvidó su contraseña?
+        </Button>
+        <Button className="btn-right" size='md' colorScheme='teal' fontSize='0.9vw' onClick={LogIn}>
             Iniciar Sesión
         </Button>
     </div>
