@@ -1,8 +1,7 @@
 import React, {useState} from "react";
 import '../css/SignUp.css';
 import { useNavigate} from "react-router-dom";
-import { Button } from '@chakra-ui/react'
-import { useToast } from '@chakra-ui/react';
+import { Button, useToast } from '@chakra-ui/react'
 
 var registry = [];
 
@@ -117,10 +116,10 @@ return(
         </ul>
     </form>
     <div className="btn">
-        <Button className="btn-left" onClick={Delete}>
+        <Button className="btn-left" onClick={Delete} className="btn-left" size='md' colorScheme='blackAlpha' fontSize='0.9vw'>
             Limpiar
         </Button>
-        <Button className="btn-right" onClick={Registro}>
+        <Button className="btn-right" onClick={Registro} className="btn-right" size='md' colorScheme='teal' fontSize='0.9vw'>
             Registrar
         </Button>
     </div>

@@ -61,28 +61,17 @@
 }
 
 .container .btn {
-  background-color: #91eeff;
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 7vw;
+  margin-top: 6vw;
 }
 .container .btn-right {
-  background-color: #28c900;
-  font: 1vw sans-serif;
-  width: 5vw;
-  height: 2.5vw;
-  border-radius: 7px;
-  margin-left: 50%;
+  margin-left: 40%;
 }
 
 .container .btn-left {
-  background-color: #1a8100;
-  font: 1vw sans-serif;
-  width: 5vw;
-  height: 2vw;
-  border-radius: 7px;
-  margin-left: 8%;
+  margin-left: 12%;
 }
 
 .App-body h1 {

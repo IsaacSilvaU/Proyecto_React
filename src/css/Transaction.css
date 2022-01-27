@@ -60,7 +60,7 @@
   background-color: #91eeff;
   margin: 0 auto;
   width: 27vw;
-  height: 9vw;
+  height: 8.8vw;
   padding: 1em;
   padding-top: 0.5vw;
 }
@@ -106,24 +106,11 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: 1vw;
+  margin-top: 1.5vw;
 }
 .container-T .btn-R {
-  background-color: #28c900;
   font: 1vw sans-serif;
-  width: 7vw;
-  height: 2.5vw;
-  border-radius: 7px;
-  margin-left: 40%;
-}
-
-.container-T .btn-left-R {
-  background-color: #1a8100;
-  font: 1vw sans-serif;
-  width: 5vw;
-  height: 2vw;
-  border-radius: 7px;
-  margin-left: 8%;
+  margin-left: 37%;
 }
 
 .App-body-T h1 {

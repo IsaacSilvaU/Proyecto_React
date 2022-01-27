@@ -120,7 +120,7 @@ return (
             </ul>
         </form>
         <div className="btn">
-          <Button className="btn-R" onClick={TransactionBalance}>
+          <Button className="btn-R" onClick={TransactionBalance} size='md' colorScheme='teal' fontSize='0.9vw'>
               Enviar monto
           </Button>
         </div>
