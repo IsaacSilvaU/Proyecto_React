@@ -9,8 +9,10 @@
   font-size: 3.5vw;
   -webkit-text-stroke: 0.5px #1a8100;
   background-color: #91eeff;
-  padding-right: 20vw;
-  padding-left: 29vw;
+  display: flex;
+  padding-right: auto;
+  padding-left: auto;
+  justify-content: center;;
   padding-top: 0.8vw;
 }
 
@@ -18,8 +20,8 @@
   background-color: #91eeff;
   width: 29vw;
   height: 28.5vw;
-  margin-top: 1vw;
-  margin-left: 34vw;
+  margin-right: auto;
+  margin-left: auto;
   border: 4px solid rgb(255, 255, 255);
   border-radius: 1em;
 }
@@ -75,7 +77,10 @@
 }
 
 .App-body h1 {
-  padding-left: 40vw;
+  display: flex;
+  padding-right: auto;
+  padding-left: auto;
+  justify-content: center;
   color: #ffffff;
   font-size: calc(3vw);
   background-image: linear-gradient(

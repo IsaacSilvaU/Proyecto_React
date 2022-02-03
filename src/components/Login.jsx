@@ -1,57 +1,22 @@
 import React, { useState } from "react";
 import '../css/Login.css';
 import { useNavigate } from "react-router-dom";
-import { Button, useToast,  Container,
-    ChakraProvider,
-    FormControl,
-    FormErrorMessage,
-    FormHelperText,
-    FormLabel,
-    Input,
-    extendTheme,
-    Box, } from '@chakra-ui/react';
-
-    const activeLabelStyles = {
-        transform: 'scale(0.85) translateY(-24px) translateX(-10px)',
-      }
-
-      export const theme = extendTheme({
-        components: {
-          Form: {
-            variants: {
-              floating: {
-                container: {
-                  _focusWithin: {
-                    label: {
-                      ...activeLabelStyles,
-                    },
-                  },
-                  'input:not(:placeholder-shown) + label, .chakra-select__wrapper + label':
-                    {
-                      ...activeLabelStyles,
-                    },
-                  label: {
-                    top: 0,
-                    left: 0,
-                    zIndex: 2,
-                    position: 'absolute',
-                    backgroundColor: 'white',
-                    pointerEvents: 'none',
-                    mx: 3,
-                    px: 1,
-                    my: 2,
-                  },
-                },
-              },
-            },
-          },
-        },
-      })
-
+import { Button, useToast, useColorMode, InputGroup, InputRightElement, InputLeftElement, useColorModeValue, Center, Box, Text, Input } from '@chakra-ui/react';
+import { ViewIcon, ViewOffIcon, LockIcon } from "@chakra-ui/icons";
+    
 export default function LoginPage(){
     
     const [userUser2, setUserUser] = useState('');
     const [userPassword2, setUserPassword] = useState('');
+    const [show, setShow] = useState(false);
+    const colorShowIcon = useColorModeValue("gray.500", "white");
+    const colorInteractiveElements = "blue.600";
+    const colorHover = "blue.300";
+    const { toggleColorMode } = useColorMode();
+    const colorBackground = useColorModeValue("gray.300", "gray.700");
+    const colorBackgroundInputs = useColorModeValue("white", "gray.500");
+    const colorText = useColorModeValue("black", "white");
+    const handleClick = () => setShow(!show);
     let navigate2 = useNavigate();
     const toast = useToast();
 
@@ -104,17 +69,6 @@ export default function LoginPage(){
 
 return(
   <>
-      <ChakraProvider theme={theme}>
-      <Box p={8}>
-        <FormControl variant='floating' id='first-name' isRequired isInvalid>
-          <Input placeholder=' ' />
-          {/* It is important that the Label comes after the Control due to css selectors */}
-          <FormLabel>First name</FormLabel>
-          <FormHelperText>Keep it very short and sweet!</FormHelperText>
-          <FormErrorMessage>Your First name is invalid</FormErrorMessage>
-        </FormControl>
-      </Box>
-    </ChakraProvider>
     <form>
         <ul>
             <li>
@@ -122,9 +76,73 @@ return(
                 <input type="text" value={userUser2} onChange={(v)=>setUserUser(v.target.value)} placeholder=" User name"></input>
             </li>
             <li>
-                <label for="passowrd">Contraseña: </label>
-                <input type="password" value={userPassword2} onChange={(v)=>setUserPassword(v.target.value)} placeholder=" Password"></input>
+            <label for="text">Contraseña: </label>
+            <Box className="Input2" w="100%" mp='5vw'>
+              <InputGroup>
+                <InputLeftElement
+                    children={<LockIcon color={colorInteractiveElements} />}
+                />
+                <Input
+                    value={userPassword2}
+                    onChange={(v)=>setUserPassword(v.target.value)}
+                    color={colorText}
+                    bg={colorBackgroundInputs}
+                    placeholder="password"
+                    borderColor="black"
+                    _hover={{ borderColor: colorHover }}
+                    type={show ? "text" : "password"}
+                />
+                <InputRightElement onClick={handleClick}>
+                    {show ? (
+                    <ViewOffIcon color={colorShowIcon} />
+                    ) : (
+                    <ViewIcon color={colorShowIcon} />
+                    )}
+                </InputRightElement>
+                </InputGroup>
+            </Box>
             </li>
+
+{/*             <Center>
+
+<Box w="100%">
+      <Text>Email:</Text>
+      <InputGroup>
+        <Input
+          color={colorText}
+          bg={colorBackgroundInputs}
+          placeholder="email@email.com"
+          borderColor="black"
+          _hover={{ borderColor: colorHover }}
+        />
+      </InputGroup>
+    </Box>
+
+    <Box w="100%">
+      <Text>Password:</Text>
+      <InputGroup>
+        <InputLeftElement
+          children={<LockIcon color={colorInteractiveElements} />}
+        />
+        <Input
+          color={colorText}
+          bg={colorBackgroundInputs}
+          placeholder="password"
+          borderColor="black"
+          _hover={{ borderColor: colorHover }}
+          type={show ? "text" : "password"}
+        />
+        <InputRightElement onClick={handleClick} left='8vw'>
+          {show ? (
+            <ViewOffIcon color={colorShowIcon} />
+          ) : (
+            <ViewIcon color={colorShowIcon} />
+          )}
+        </InputRightElement>
+      </InputGroup>
+    </Box>
+</Center> */}
+
         </ul>
     </form>
     <div className="btn">

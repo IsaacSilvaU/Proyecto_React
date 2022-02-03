@@ -116,10 +116,10 @@ return(
         </ul>
     </form>
     <div className="btn">
-        <Button className="btn-left" onClick={Delete} className="btn-left" size='md' colorScheme='blackAlpha' fontSize='0.9vw'>
+        <Button className="btn-left" onClick={Delete} size='md' colorScheme='blackAlpha' fontSize='0.9vw'>
             Limpiar
         </Button>
-        <Button className="btn-right" onClick={Registro} className="btn-right" size='md' colorScheme='teal' fontSize='0.9vw'>
+        <Button className="btn-right" onClick={Registro} size='md' colorScheme='teal' fontSize='0.9vw'>
             Registrar
         </Button>
     </div>

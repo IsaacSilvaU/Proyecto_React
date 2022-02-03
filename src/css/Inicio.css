@@ -24,7 +24,10 @@
 }
 
 .App-bodyi h1 {
-  padding-left: 32vw;
+  display: flex;
+  padding-right: auto;
+  padding-left: auto;
+  justify-content: center;
   color: #ffffff;
   font-family: "Times New Roman", Times, serif;
   font-size: calc(3vw);

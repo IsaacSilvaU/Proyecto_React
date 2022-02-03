@@ -8,7 +8,10 @@
 .App-bodyu {
   background-color: #83ecff;
   height: 42vw;
+  
 }
+
+
 
 .App-bodyu .image {
   width: 53vw;
@@ -112,7 +115,10 @@
   background-color: #83ecff;
 }
 .App-bodyu h1 {
-  padding-left: 37%;
+  display: flex;
+  padding-right: auto;
+  padding-left: auto;
+  justify-content:center;
   color: #ffffff;
   font-size: calc(3vw);
   background-image: linear-gradient(
