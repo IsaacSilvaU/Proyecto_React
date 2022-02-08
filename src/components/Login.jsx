@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 /* import '../css/Login.css'; */
 import { useNavigate } from "react-router-dom";
-import { Button, useToast, useColorMode, InputGroup, InputRightAddon, InputLeftElement, useColorModeValue, Center, Box, Text, Input, InputRightAddonut, HStack, InputRightElement } from '@chakra-ui/react';
-import { ViewIcon, ViewOffIcon, LockIcon } from "@chakra-ui/icons";
-import Transaction from "./Transaction";
+import { Button, useToast, InputGroup, InputRightAddon, useColorModeValue, Box, Input, HStack } from '@chakra-ui/react';
+import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
     
 export default function LoginPage(){
     
@@ -11,10 +10,7 @@ export default function LoginPage(){
     const [userPassword2, setUserPassword] = useState('');
     const [show, setShow] = useState(false);
     const colorShowIcon = useColorModeValue("gray.500", "white");
-    const colorInteractiveElements = "blue.600";
     const colorHover = "blue.300";
-    const { toggleColorMode } = useColorMode();
-    const colorBackground = useColorModeValue("gray.300", "gray.700");
     const colorBackgroundInputs = useColorModeValue("white", "gray.500");
     const colorText = useColorModeValue("black", "white");
     const handleClick = () => setShow(!show);
