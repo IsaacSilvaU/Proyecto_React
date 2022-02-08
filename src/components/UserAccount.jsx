@@ -7,7 +7,7 @@ function UserAccount() {
   let navigate = useNavigate();
   const listaDeObjetos = JSON.parse(localStorage.getItem('JsonRegistry'));
   const userDocument = localStorage.getItem('userDocument');
-  //window.location.href = window.location.href.split("UserAccount/")[0]+"/Luis";
+  //window.location.href = window.location.href.split("UserAccount/")[0]+"/Luis"; //Importar parametro de URL forma directa de JS
   const toast = useToast();
 
   for(let i=0; i < listaDeObjetos.length; i++) {

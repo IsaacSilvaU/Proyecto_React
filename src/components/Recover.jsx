@@ -88,7 +88,7 @@ return(
                 <li>
                 <h3>Ingresa el correo electrónico y cédula de registro</h3>
                     <label for="mail">Correo Electrónico: </label>
-                    <input type="mail" value={userMail2} onChange={(v)=>setUserMail2(v.target.value)} placeholder=" tucorreo@email"></input>
+                    <input type="mail" value={userMail2} onChange={(v)=>setUserMail2(v.target.value)} placeholder=" TuCorreo@email"></input>
                 </li>
                 <li>
                     <label for="number">CC: </label>

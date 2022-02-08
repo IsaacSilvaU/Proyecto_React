@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import '../css/Login.css';
+/* import '../css/Login.css'; */
 import { useNavigate } from "react-router-dom";
-import { Button, useToast, useColorMode, InputGroup, InputRightElement, InputLeftElement, useColorModeValue, Center, Box, Text, Input } from '@chakra-ui/react';
+import { Button, useToast, useColorMode, InputGroup, InputRightAddon, InputLeftElement, useColorModeValue, Center, Box, Text, Input, InputRightAddonut, HStack, InputRightElement } from '@chakra-ui/react';
 import { ViewIcon, ViewOffIcon, LockIcon } from "@chakra-ui/icons";
+import Transaction from "./Transaction";
     
 export default function LoginPage(){
     
@@ -34,11 +35,13 @@ export default function LoginPage(){
                         isClosable: true,
                       });
                     const userDocument = userInfo.userCC;
+                    
                     const account = true;
                     localStorage.setItem('userDocument',userDocument);
                     localStorage.setItem('account',account);
                     navigate2("../UserPage",{replace: true});
-
+/*                     navigate2(`../UserPage/${userDocument}`,{replace: true});
+                    <Transaction userDocument={userDocument}/> */
                 }else if (userPassword2 === ''){
                     toast({
                         title: "No se ha ingresado la información completa.",
@@ -69,87 +72,52 @@ export default function LoginPage(){
 
 return(
   <>
-    <form>
-        <ul>
-            <li>
-                <label for="text">Nombre de Usuario: </label>
-                <input type="text" value={userUser2} onChange={(v)=>setUserUser(v.target.value)} placeholder=" User name"></input>
-            </li>
-            <li>
+    <Box p={10} pb={5}>
+        <HStack>
+            <label for="text">Nombre de Usuario: </label>
+            <InputGroup p={3} className="Username">
+            <Input
+                value={userUser2}
+                onChange={(v)=>setUserUser(v.target.value)}
+                color={colorText}
+                bg={colorBackgroundInputs}
+                placeholder="username"
+                borderColor="black"
+                _hover={{ borderColor: colorHover }}
+                h='2vw'
+            />
+            </InputGroup>
+        </HStack>
+        <HStack>
             <label for="text">Contraseña: </label>
-            <Box className="Input2" w="100%" mp='5vw'>
-              <InputGroup>
-                <InputLeftElement
-                    children={<LockIcon color={colorInteractiveElements} />}
-                />
-                <Input
-                    value={userPassword2}
-                    onChange={(v)=>setUserPassword(v.target.value)}
-                    color={colorText}
-                    bg={colorBackgroundInputs}
-                    placeholder="password"
-                    borderColor="black"
-                    _hover={{ borderColor: colorHover }}
-                    type={show ? "text" : "password"}
-                />
-                <InputRightElement onClick={handleClick}>
+            <InputGroup p={3} className="Password">
+            <Input
+                value={userPassword2}
+                onChange={(v)=>setUserPassword(v.target.value)}
+                color={colorText}
+                bg={colorBackgroundInputs}
+                placeholder="password"
+                borderColor="black"
+                _hover={{ borderColor: colorHover }}
+                type={show ? "text" : "password"}
+                h='2vw'
+            />
+                <InputRightAddon onClick={handleClick} h='2vw'>
                     {show ? (
                     <ViewOffIcon color={colorShowIcon} />
                     ) : (
                     <ViewIcon color={colorShowIcon} />
                     )}
-                </InputRightElement>
-                </InputGroup>
-            </Box>
-            </li>
+                </InputRightAddon>
+            </InputGroup>
+        </HStack>
 
-{/*             <Center>
-
-<Box w="100%">
-      <Text>Email:</Text>
-      <InputGroup>
-        <Input
-          color={colorText}
-          bg={colorBackgroundInputs}
-          placeholder="email@email.com"
-          borderColor="black"
-          _hover={{ borderColor: colorHover }}
-        />
-      </InputGroup>
     </Box>
-
-    <Box w="100%">
-      <Text>Password:</Text>
-      <InputGroup>
-        <InputLeftElement
-          children={<LockIcon color={colorInteractiveElements} />}
-        />
-        <Input
-          color={colorText}
-          bg={colorBackgroundInputs}
-          placeholder="password"
-          borderColor="black"
-          _hover={{ borderColor: colorHover }}
-          type={show ? "text" : "password"}
-        />
-        <InputRightElement onClick={handleClick} left='8vw'>
-          {show ? (
-            <ViewOffIcon color={colorShowIcon} />
-          ) : (
-            <ViewIcon color={colorShowIcon} />
-          )}
-        </InputRightElement>
-      </InputGroup>
-    </Box>
-</Center> */}
-
-        </ul>
-    </form>
     <div className="btn">
-        <Button className="btn-right2" size='md' colorScheme='teal' fontSize='0.8vw' variant='outline' onClick={()=>navigate2("../Recover",{replace: true})}>
+        <Button className="btn-right2" size='md' mt={5} colorScheme='teal' fontSize='0.8vw' variant='outline' onClick={()=>navigate2("../Recover",{replace: true})}>
             ¿Olvidó su contraseña?
         </Button>
-        <Button className="btn-right" size='md' colorScheme='teal' fontSize='0.9vw' onClick={LogIn}>
+        <Button className="btn-right" size='md' mt={5} colorScheme='teal' fontSize='0.9vw' onClick={LogIn}>
             Iniciar Sesión
         </Button>
     </div>

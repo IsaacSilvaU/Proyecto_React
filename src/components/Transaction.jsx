@@ -3,10 +3,13 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useToast, Button } from '@chakra-ui/react';
 
-export default function Transaction(){
+export default function Transaction(props){
   const [userCC2, setUserCC2] = useState('');
   const [userBalance2, setUserBalance] = useState(0);
 
+/*   const uCC = props.userDocument; //Forma 1
+  const {userDocument} = props; // Forma 2
+  console.log(userDocument); */
 
   let navigate = useNavigate();
   const toast = useToast();
@@ -14,28 +17,25 @@ export default function Transaction(){
   function TransactionBalance(){
   const userDocument = localStorage.getItem('userDocument');
 
-    console.log("Hola1");
-
-    if (userCC2==='' || userBalance2===''){
+    if (userCC2==='' || userBalance2===0){
       toast({
         title: `Error. Por favor diligenciar todos los campos.`,
         status: "error",
         duration: 3000,
         isClosable: true,
       });
-      console.log("Hola2");
 
     }else{
       const listaDeObjetos = JSON.parse(localStorage.getItem('JsonRegistry'));
-      console.log("Hola3");
       let comprobation = 1;
 
       for(let i=0; i < listaDeObjetos.length; i++) {
         var userInfo = JSON.parse(listaDeObjetos[i]);
-        console.log(typeof userInfo.balance);
 
-        if(userCC2 === userInfo.userCC){
-            console.log("Hola4");
+        if(userCC2 === userInfo.userCC && userCC2 !== userDocument){
+          if(userBalance2){
+
+          }
             const user ={
                 userName:userInfo.userName,
                 userLastN:userInfo.userLastN,
@@ -63,7 +63,15 @@ export default function Transaction(){
             });
             navigate("../UserPage",{replace: true});
             comprobation = 2;
-        }else if (i === listaDeObjetos.length-1 && comprobation !== 2){
+
+      }else if (userCC2 === userInfo.userCC && userCC2 === userDocument){
+        toast({
+          title: "Error. Documento del destinatario no puede ser igual al remitente",
+          status: "warning",
+          duration: 1000,
+          isClosable: true,
+        });
+      }else if (i === listaDeObjetos.length-1 && comprobation !== 2){
         toast({
           title: "Información de usuario incorrecta",
           status: "warning",
@@ -77,7 +85,6 @@ export default function Transaction(){
       console.log(userInfo.userCC);
 
       if(userDocument === userInfo.userCC){
-          console.log("Hola6");
           const user ={
               userName:userInfo.userName,
               userLastN:userInfo.userLastN,
